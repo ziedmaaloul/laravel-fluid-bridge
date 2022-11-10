@@ -2,8 +2,7 @@
   "name": "ziedmaaloul/laravel-fluid-bridge",
   "description": "TYPO3.Fluid support for Laravel.",
   "require": {
-    "typo3fluid/fluid": "^1.0",
-    "laravel/framework": "^9.3"
+    "typo3fluid/fluid": "^1.0"
   },
   "version": "2.0",
   "license": "MIT",
