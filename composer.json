@@ -20,10 +20,7 @@
   "autoload": {
     "psr-4": {
       "Diego\\Fluid\\": "src/"
-    },
-    "files" : [
-        "render/render.php"
-    ]
+    }
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^2.7",
