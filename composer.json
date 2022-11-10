@@ -2,7 +2,7 @@
   "name": "ziedmaaloul/laravel-fluid-bridge",
   "description": "Add TYPO3.Fluid Template Engine to Laravel 8 and 9 with custom function , Blade Still Working , Enjoy.",
   "require": {
-    "typo3fluid/fluid": "^1.0"
+    "typo3fluid/fluid": "^2.7.2"
   },
   "version": "2.0",
   "license": "MIT",
