@@ -1,6 +1,6 @@
 # Installation
 ```bash
-composer require diego/laravel-fluid-bridge dev-master
+composer require  ziedmaaloul/laravel-fluid-bridge
 ```
 In the `config/app.php` add `FluidServiceProvider` to the `providers` section.
 ```php
@@ -8,21 +8,21 @@ In the `config/app.php` add `FluidServiceProvider` to the `providers` section.
 	Diego\Fluid\FluidServiceProvider::class,
 ],
 ```
-
 # Usage
-## The Laravel Way
-By default you can now resolve ".html" templates with the normal `view('name')` call. These files will be rendered by TYPO3.Fluid.
-## The Extbase Way
-Further more you can exten the `Diego\Fluid\Controller\AbstractFluidController` instead of the BaseController and use the view like in Extbase:
- 
-```php
-class Page extends AbstractFluidController
-{
-    public function welcome()
-    {
-        $this->view->assign('name', 'John');
-    }
-}
-```
 
-This will resolve the template name to `resources/views/Templates/Page/Welcome.html` automatically and will render the template after the action is finished.
+## Rendering By Trait in Page Folder
+
+```php
+Diego\Fluid\Render::template('Welcome' , ['parameter' => 'parameter'] , 1);
+```
+This will resolve the template name to `resources/views/Templates/Page/Welcome.html`
+
+## Rendering By Trait Outside Page Folder
+
+```php
+Diego\Fluid\Render::template('FolderOne/File' , ['parameter' => 'parameter'] , 0);
+```
+This will resolve the template name to `resources/views/Templates/FolderOne/File.html`
+
+
+Enjoy :-)
