@@ -40,7 +40,7 @@ abstract class AbstractFluidController extends Controller
     {
         /** @var TemplateView $view */
         $view = resolve(TemplateView::class);
-
+        $view->assignMultiple($parameters);
         $renderMethod = $isPage ? 'Page' : explode('/', $method)[0];
         $context = $view->getRenderingContext();
         $context->setControllerAction($this->prepareMethodPath($method, $isPage));
@@ -48,7 +48,6 @@ abstract class AbstractFluidController extends Controller
 
         $view->setRenderingContext($context);
         $this->view = $view;
-
         $result = null;
         if ($result === null) {
             $result = $this->view->render();
