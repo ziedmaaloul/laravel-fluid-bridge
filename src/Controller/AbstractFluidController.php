@@ -36,7 +36,7 @@ abstract class AbstractFluidController extends Controller
      * @param bool $isPage
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function render($method, $parameters, bool $isPage = false)
+    public function render($method, array $parameters = [], bool $isPage = false)
     {
         /** @var TemplateView $view */
         $view = resolve(TemplateView::class);
