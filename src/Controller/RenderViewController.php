@@ -11,7 +11,7 @@ use TYPO3Fluid\Fluid\View\ViewInterface;
  */
 class RenderViewController extends AbstractFluidController
 {
-    public function renderView($method, $parameters, $isPage = false)
+    public function renderView($method, array $parameters = [], $isPage = false)
     {
         return $this->render($method, $parameters, $isPage);
     }
