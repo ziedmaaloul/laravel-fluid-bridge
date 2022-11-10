@@ -11,7 +11,7 @@ use TYPO3Fluid\Fluid\View\ViewInterface;
  */
 trait Render
 {
-    public function template($method, $parameters = [], $isPage = false)
+    public static function template($method, $parameters = [], $isPage = false)
     {
         $renderViewController = new \Diego\Fluid\Controller\RenderViewController();
 
