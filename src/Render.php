@@ -15,6 +15,6 @@ trait Render
     {
         $renderViewController = new \Diego\Fluid\Controller\RenderViewController();
 
-        return $this->$renderViewController($method, $parameters, $isPage);
+        return $renderViewController->renderView($method, $parameters, $isPage);
     }
 }
